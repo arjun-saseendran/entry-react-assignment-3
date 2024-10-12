@@ -6,6 +6,7 @@ import "./index.css";
 import Root from "./routes/root.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ViewProduct from "./components/ViewProduct/ViewProduct.jsx";
+import Cart from "./components/Cart/Cart.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,14 @@ const router = createBrowserRouter([
       {
         path: "/view-product/:id",
         element: <ViewProduct />,
+      },
+      {
+        path: "/cart/:id",
+        element: <Cart />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },

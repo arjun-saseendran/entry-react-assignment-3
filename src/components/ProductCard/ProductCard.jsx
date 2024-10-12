@@ -57,13 +57,16 @@ function ProductCard() {
                 >
                   ${product.price}
                 </Card.Text>
-                <Button
-                  variant="dark"
-                  className="m-1"
-                  style={{ background: "#2D4263" }}
-                >
-                  Add to cart
-                </Button>
+                <Link to={`/cart/${product.id}`}>
+                  <Button
+                    variant="dark"
+                    className="m-1"
+                    style={{ background: "#2D4263" }}
+                  >
+                    Add to cart
+                  </Button>
+                </Link>
+
                 <Link to={`/view-product/${product.id}`}>
                   <Button
                     variant="dark"

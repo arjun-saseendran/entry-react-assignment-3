@@ -8,16 +8,17 @@ function Header() {
   return (
     <Navbar expand="lg" style={{ background: "#041C32" }}>
       <Container>
-        <Navbar.Brand className="text-white" href="/">
-          ShopNow
+        <Navbar.Brand className="text-white">
+          <Link className="nav-link" to={"/"}>ShopNow</Link>
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link className="nav-link text-white" href="#home">
+            <Link to={'/'} className="nav-link text-white" >
               Home
             </Link>
-            <Link className="nav-link text-white" href="#link">
+            <Link to={'/cart'} className="nav-link text-white">
               Cart
             </Link>
           </Nav>

@@ -35,9 +35,9 @@ function ViewProduct() {
                 {viewProduct.description}
               </Card.Text>
               <Card.Text style={{ color: "#2D4263" }}>
-                {viewProduct.price}
+                ${viewProduct.price}
               </Card.Text>
-              <Button variant="dark" style={{ background: "#2D4263" }}>
+              <Button variant="dark" className="w-100" style={{ background: "#2D4263" }}>
                 Buy now
               </Button>
             </Card.Body>
