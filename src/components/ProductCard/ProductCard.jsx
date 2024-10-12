@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import axios from "axios";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function ProductCard() {
   const [products, setProducts] = useState([]);
@@ -18,7 +19,7 @@ function ProductCard() {
       <Row>
         {products.map((product) => (
           <Col xs={12} sm={6} md={4} xl={3} key={product.id}>
-            <Card style={{ background: "#8EACCD", marginBottom: '24px' }} >
+            <Card style={{ background: "#8EACCD", marginBottom: "24px" }}>
               <Card.Img
                 variant="top"
                 src={product.image}
@@ -63,13 +64,15 @@ function ProductCard() {
                 >
                   Add to cart
                 </Button>
-                <Button
-                  variant="dark"
-                  className="m-1"
-                  style={{ background: "#2D4263" }}
-                >
-                  View product
-                </Button>
+                <Link to={`/view-product/${product.id}`}>
+                  <Button
+                    variant="dark"
+                    className="m-1"
+                    style={{ background: "#2D4263" }}
+                  >
+                    View product
+                  </Button>
+                </Link>
               </Card.Body>
             </Card>
           </Col>
