@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../features/cart/cartSlice";
 
-
 function ProductCard() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -17,9 +16,7 @@ function ProductCard() {
       .catch((error) => console.log(error));
   }, []);
 
-  const dispatch = useDispatch()
-
-  
+  const dispatch = useDispatch();
 
   return (
     <Container className="m-5">
@@ -64,15 +61,15 @@ function ProductCard() {
                 >
                   ${product.price}
                 </Card.Text>
-                <Link to={`/cart/${product.id}`}>
-                  <Button
-                    variant="dark"
-                    className="m-1"
-                    style={{ background: "#2D4263" }}
-                  >
-                    Add to cart
-                  </Button>
-                </Link>
+
+                <Button
+                  onClick={() => dispatch(addToCart(product))}
+                  variant="dark"
+                  className="m-1"
+                  style={{ background: "#2D4263" }}
+                >
+                  Add to cart
+                </Button>
 
                 <Link to={`/view-product/${product.id}`}>
                   <Button

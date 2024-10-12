@@ -1,24 +1,13 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
-import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 
 function Cart() {
-    const [cartProducts, setProducts] = useState([])
-    const {id} = useParams()
-    useEffect(()=>{
-        axios.get(`https://fakestoreapi.com/products/${id}`).then(response =>{
-            const cart = [];
-            cart.push(response.data)
-            
-            setProducts(cart)
-        
-        
-        
-        }).catch(error => console.log(error)
-        );
-    },[cartProducts])
+    const cartProducts = useSelector(state => state.cart.cartProducts)
+    const cartNo = useSelector(state => state.cart.cartNo)
+    
   return (
     <Container className="m-5 vh-100">
       <Table striped bordered hover>
@@ -36,7 +25,7 @@ function Cart() {
         <tbody>
           {cartProducts.map((product) => (
             <tr>
-              <td style={{ background: "#8EACCD", color: "#2D4263" }}>1</td>
+              <td style={{ background: "#8EACCD", color: "#2D4263" }}>{cartNo}</td>
               <td style={{ background: "#8EACCD", color: "#2D4263" }}>
                 {product.title}
               </td>
