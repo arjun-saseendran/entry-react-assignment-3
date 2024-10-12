@@ -4,6 +4,9 @@ import Card from "react-bootstrap/Card";
 import axios from "axios";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../features/cart/cartSlice";
+
 
 function ProductCard() {
   const [products, setProducts] = useState([]);
@@ -13,6 +16,10 @@ function ProductCard() {
       .then((response) => setProducts(response.data))
       .catch((error) => console.log(error));
   }, []);
+
+  const dispatch = useDispatch()
+
+  
 
   return (
     <Container className="m-5">
