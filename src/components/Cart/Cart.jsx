@@ -37,7 +37,7 @@ function Cart() {
                 {product.description}
               </td>
               <td style={{ background: "#8EACCD", color: "#2D4263" }}>
-                {product.price}
+                ${product.price}
               </td>
             </tr>
           ))}
