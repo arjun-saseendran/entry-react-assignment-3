@@ -18,7 +18,7 @@ function ViewProduct() {
 
   return (
     <Container>
-      <Row className="flex justify-content-center align-items-center m-5">
+      <Row className="flex justify-content-center align-items-center">
         <Card style={{ background: "#8EACCD" }} className="p-5">
           <Card.Img
             variant="top"
