@@ -15,34 +15,35 @@ function ViewProduct() {
       .then((response) => setViewProduct(response.data))
       .catch((error) => console.log(error));
   }, []);
-  
 
   return (
     <Container>
       <Row className="flex justify-content-center align-items-center m-5">
-        
-          <Card style={{ background: "#8EACCD" }} className="p-5">
-            <Card.Img
-              variant="top"
-              src={viewProduct.image}
-              style={{ objectFit: "contain", height: "300px" }}
-            />
-            <Card.Body>
-              <Card.Title style={{ color: "#2D4263" }}>
-                {viewProduct.title}
-              </Card.Title>
-              <Card.Text style={{ color: "#2D4263" }}>
-                {viewProduct.description}
-              </Card.Text>
-              <Card.Text style={{ color: "#2D4263" }}>
-                ${viewProduct.price}
-              </Card.Text>
-              <Button variant="dark" className="w-100" style={{ background: "#2D4263" }}>
-                Buy now
-              </Button>
-            </Card.Body>
-          </Card>
-        
+        <Card style={{ background: "#8EACCD" }} className="p-5">
+          <Card.Img
+            variant="top"
+            src={viewProduct.image}
+            style={{ objectFit: "contain", height: "300px" }}
+          />
+          <Card.Body>
+            <Card.Title style={{ color: "#2D4263" }}>
+              {viewProduct.title}
+            </Card.Title>
+            <Card.Text style={{ color: "#2D4263" }}>
+              {viewProduct.description}
+            </Card.Text>
+            <Card.Text style={{ color: "#2D4263" }}>
+              ${viewProduct.price}
+            </Card.Text>
+            <Button
+              variant="dark"
+              className="w-100"
+              style={{ background: "#2D4263" }}
+            >
+              Buy now
+            </Button>
+          </Card.Body>
+        </Card>
       </Row>
     </Container>
   );

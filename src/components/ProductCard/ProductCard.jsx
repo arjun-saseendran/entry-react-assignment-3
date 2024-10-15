@@ -19,7 +19,7 @@ function ProductCard() {
   const dispatch = useDispatch();
 
   return (
-    <Container className="m-5">
+    <Container>
       <Row>
         {products.map((product) => (
           <Col xs={12} sm={6} md={4} xl={3} key={product.id}>
