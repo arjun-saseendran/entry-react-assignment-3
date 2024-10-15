@@ -19,8 +19,8 @@ function ViewProduct() {
 
   return (
     <Container>
-      <Row className="flex justify-content-center align-items-center m-5 vh-100">
-        <Col sm={12} className="w-50" key={viewProduct.id}>
+      <Row className="flex justify-content-center align-items-center m-5">
+        
           <Card style={{ background: "#8EACCD" }} className="p-5">
             <Card.Img
               variant="top"
@@ -42,7 +42,7 @@ function ViewProduct() {
               </Button>
             </Card.Body>
           </Card>
-        </Col>
+        
       </Row>
     </Container>
   );
