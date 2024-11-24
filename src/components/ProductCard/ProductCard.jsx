@@ -20,9 +20,9 @@ function ProductCard() {
 
   return (
     <Container>
-      <Row>
+      <Row className="mt-5">
         {products.map((product) => (
-          <Col xs={12} sm={6} md={4} xl={3} key={product.id} className="mt-5">
+          <Col xs={12} sm={6} md={4} xl={3} key={product.id}>
             <Card style={{ background: "#8EACCD", marginBottom: "24px" }}>
               <Card.Img
                 variant="top"
